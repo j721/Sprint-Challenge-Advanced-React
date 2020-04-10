@@ -12,13 +12,10 @@ class Card extends React.Component{
         axios.get("http://localhost:5000/api/players")
         .then(response=>{
             console.log(response.data)
-            this.setState({
-                users:response.data
-            })
-            .catcher(error=>{
-                console.log(error, "data failed to return");
-            })
-        })
+            this.setState(
+                {users:response.data})
+            }) 
+            .catch(err => console.error(err));
     }
     render(){
         return(
