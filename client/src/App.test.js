@@ -15,3 +15,7 @@ test ("displays navbar",()=>{
   getByTestId(/nav/i)
 })
 
+test ("displays nav text",()=>{
+  const nav = render (<Navbar/>);
+  nav.getByText ("List of Searched Players");
+})
