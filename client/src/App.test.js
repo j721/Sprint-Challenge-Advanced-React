@@ -14,3 +14,4 @@ test ("displays navbar",()=>{
   const {getByTestId} = render (<Navbar/>);
   getByTestId(/nav/i)
 })
+
