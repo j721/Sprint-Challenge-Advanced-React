@@ -20,19 +20,20 @@ class Card extends React.Component{
             })
         })
     }
-//     render(){
-//         return(
-//             <div className="Card-content" data-testid="axiosCallReturn">
-//                 {this.state.users.map(player=>{
-//                     <div className="card-div">
-//                         <h1>{player.name}</h1>
+    render(){
+        return(
+            <div className="card-container" data-testid="axiosReturn">
+                {this.state.users.map(player=>(
+                    <div className ="card-info">
+                        <h1>{player.name}</h1>
+                        <h2>{player.country}</h2>
+                        <p>Number of Searches:{player.searches}</p>
+                    </div>
+                ))}
+            </div>
+        )
 
-//                     </div>
-//                 })}
-
-//             </div>
-//         )
-//     }
+    }
 }
 
 export default Card; 
