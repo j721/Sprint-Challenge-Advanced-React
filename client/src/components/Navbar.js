@@ -10,8 +10,9 @@ const Navbar = () => {
   };
   return (
     <nav className="navbar" data-testid ="navigation">
-      <h1>Click here to switch between dark mode and light mode</h1>
+      <h1>List of Searched Players</h1>
       <div className="dark-mode__toggle">
+          <p>Click on button switch between dark and light mode</p>
         <button
           onClick={toggleMode}
           className={darkMode ? 'toggle toggled' : 'toggle'}
