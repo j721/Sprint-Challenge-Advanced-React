@@ -23,6 +23,26 @@
   background-color: #313843;
 }
 
+body{
+  background-color: aliceblue;  
+}
+
+.card-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2%;
+}
+
 .card-info{
   border: 1.5em solid #baa7e0;
+  width: 50%;
+}
+
+
+button{
+  border: 1px solid #ef00ff;
+    height: 2vh;
+    width: 8em;
+    border-radius: 1em;
 }

@@ -1,16 +1,17 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import Card from './Card';
+import {useLocalStorage} from '../hooks/useLocalStorage';
 
 import { render, getByTestId, fireEvent} from "@testing-library/react";
 
-test("if Card renders props",()=>{
-    const props ={
+test("if Card renders users props",()=>{
+    const users ={
         name: 'Andressa',
         country: 'Brazil',
     }
     //Arrange
-    const {getByText} =render (<Card {...props}/>)
+    const {getByText} =render (<Card {...users}/>)
     const name = getByText('Andressa')
     const country = getByText('Brazil')
 
