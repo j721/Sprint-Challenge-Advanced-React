@@ -15,18 +15,24 @@ class Card extends React.Component{
             this.setState({
                 users:response.data
             })
+            .catcher(error=>{
+                console.log(error, "data failed to return");
+            })
         })
     }
-    render(){
-        return(
-            <div className="Card-content" data-testid="axiosCallReturn">
-                {this.state.users.map(player=>{
-                    <div className="card-div">
-                        <h1>{</h1>
-                    </div>
-                })}
+//     render(){
+//         return(
+//             <div className="Card-content" data-testid="axiosCallReturn">
+//                 {this.state.users.map(player=>{
+//                     <div className="card-div">
+//                         <h1>{player.name}</h1>
 
-            </div>
-        )
-    }
+//                     </div>
+//                 })}
+
+//             </div>
+//         )
+//     }
 }
+
+export default Card; 
