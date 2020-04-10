@@ -6,7 +6,7 @@ import '@testing-library/jest-dom/extend-expect';
 
 test ("if toggle dark mode works",async()=>{
     const container = render (<NavBar/>)
-    const button = container.getByText (/toggle dark mode/i)
+    const button = container.getByTestId (/button/i)
     fireEvent.click(button)
     expect (document.body.className).toBe("dark-mode");
 })

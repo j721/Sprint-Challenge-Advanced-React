@@ -13,7 +13,7 @@ const Navbar = () => {
       <h1>List of Searched Players</h1>
       <div className="dark-mode__toggle">
           <p>Click on button switch between dark and light mode</p>
-        <button
+        <button data-testid ="button"
           onClick={toggleMode}
           className={darkMode ? 'toggle toggled' : 'toggle'}
         />
